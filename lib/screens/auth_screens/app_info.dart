@@ -1,8 +1,6 @@
-import 'package:community_hub/constants/colors.dart';
 import 'package:community_hub/widgets/custom_button.dart';
 import 'package:community_hub/widgets/mini_box.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class MoreInfoScreen extends StatelessWidget {
   const MoreInfoScreen({super.key});

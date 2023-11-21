@@ -10,6 +10,7 @@ class MiniBox extends StatelessWidget {
     return Container(
       width: 120,
       height: 120,
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
           border: Border.all(
         width: 2,
@@ -20,6 +21,7 @@ class MiniBox extends StatelessWidget {
           discription,
           style: const TextStyle(
             fontSize: 16,
+            fontWeight: FontWeight.w500,
           ),
           textAlign: TextAlign.center,
         ),
