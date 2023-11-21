@@ -1,3 +1,4 @@
+import 'package:community_hub/screens/login/login.dart';
 import 'package:community_hub/widgets/custom_button.dart';
 import 'package:community_hub/widgets/mini_box.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,13 @@ class MoreInfoScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            CustomButtom(action: 'Login', nav: () {}),
+            CustomButtom(
+                action: 'Login',
+                nav: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
+                  ));
+                }),
             const SizedBox(
               height: 40,
             ),
