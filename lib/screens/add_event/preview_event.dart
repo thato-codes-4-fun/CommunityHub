@@ -1,4 +1,5 @@
 import 'package:community_hub/constants/colors.dart';
+import 'package:community_hub/screens/add_event/event_add_result.dart';
 import 'package:community_hub/widgets/preview_event.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,13 @@ class _PreviewEVentCreatedState extends State<PreviewEVentCreated> {
             child: Column(
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const EventResultScreen(),
+                      ),
+                    );
+                  },
                   icon: const Icon(
                     Icons.save,
                     color: greenColor,
