@@ -14,22 +14,11 @@ class FeaturedBox extends StatelessWidget {
       ),
       width: 160,
       height: 220,
-      //  height: 120.0,
-      // width: 120.0,
-      // decoration: BoxDecoration(
-      //   image: DecorationImage(
-      //     image: AssetImage(
-      //         'assets/assets/alucard.jpg'),
-      //     fit: BoxFit.fill,
-      //   ),
-      //   shape: BoxShape.circle,
-      // ),
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.fill,
           image: AssetImage(
             boxData['image'],
-            
           ),
         ),
         color: greenColor,
@@ -40,15 +29,24 @@ class FeaturedBox extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              boxData['title'],
-              style: const TextStyle(
-                color: darkColor,
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+            Stack(
+              children: [
+                Container(
+                  color: darkColor.withOpacity(0.5),
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.1,
+                ),
+                Text(
+                  boxData['title'],
+                  style: const TextStyle(
+                    color: greenColor,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(boxData['establishment']),
+              ],
             ),
-            Text(boxData['establishment']),
           ],
         ),
       ),

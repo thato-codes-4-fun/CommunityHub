@@ -17,72 +17,75 @@ class _BusinessCardState extends State<BusinessCard> {
         bottom: 10,
       ),
       color: greenColor,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          ListTile(
-            leading: Container(
-              width: 100,
-              height: 100,
-              decoration: const BoxDecoration(
-                color: whiteColor,
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                    'assets/images/grocery.jpg',
-                  ),
-                ),
-              ),
-            ),
-            title: const Text(
-              'Checkers',
-              style: TextStyle(
-                fontSize: 25,
-                color: whiteColor,
-              ),
-            ),
-            subtitle: const Text(
-              'Groceries',
-              style: TextStyle(
-                fontSize: 20,
-                color: whiteColor,
-              ),
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              Container(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            ListTile(
+              leading: Container(
+                width: 100,
+                height: 100,
                 decoration: const BoxDecoration(
-                  color: blueColor,
-                  shape: BoxShape.circle,
-                ),
-                child: TextButton(
-                  child: const Icon(
-                    Icons.phone,
-                    color: whiteColor,
+                  color: whiteColor,
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(
+                      'assets/images/grocery.jpg',
+                    ),
                   ),
-                  onPressed: () {},
                 ),
               ),
-              const SizedBox(width: 8),
-              Container(
-                decoration: const BoxDecoration(
-                  color: locationRedColor,
-                  shape: BoxShape.circle,
-                ),
-                child: TextButton(
-                  child: const Icon(
-                    Icons.pin_drop_outlined,
-                    color: whiteColor,
-                  ),
-                  onPressed: () {/* ... */},
+              title: const Text(
+                'Checkers',
+                style: TextStyle(
+                  fontSize: 25,
+                  color: whiteColor,
                 ),
               ),
-              const SizedBox(width: 8),
-            ],
-          ),
-        ],
+              subtitle: const Text(
+                'Groceries',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: whiteColor,
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Container(
+                  decoration: const BoxDecoration(
+                    color: blueColor,
+                    shape: BoxShape.circle,
+                  ),
+                  child: TextButton(
+                    child: const Icon(
+                      Icons.phone,
+                      color: whiteColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: locationRedColor,
+                    shape: BoxShape.circle,
+                  ),
+                  child: TextButton(
+                    child: const Icon(
+                      Icons.pin_drop_outlined,
+                      color: whiteColor,
+                    ),
+                    onPressed: () {/* ... */},
+                  ),
+                ),
+                const SizedBox(width: 8),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

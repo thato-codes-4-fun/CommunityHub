@@ -66,7 +66,7 @@ class DummyData {
     {
       'title': 'Couples Night',
       'establishment': 'NewsCafe',
-      'image': 'assets/images/dancing.png',
+      'image': 'assets/images/pizza.jpg',
       'date': ['19 Decemeber 2023', '16h00 - 17h00'],
       'location': 'SunningHill Cherry Lane',
       'discription':
