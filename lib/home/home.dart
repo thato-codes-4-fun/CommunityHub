@@ -1,3 +1,4 @@
+import 'package:community_hub/constants/colors.dart';
 import 'package:community_hub/home/shared_home/community_hub.dart';
 import 'package:flutter/material.dart';
 
@@ -57,9 +58,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: screensList[currentIndex],
       bottomNavigationBar: NavigationBar(
+        elevation: 0,
         selectedIndex: currentIndex,
         destinations: navDestinations,
         onDestinationSelected: updateIndex,
+        indicatorColor: greenColor,
       ),
     );
   }
