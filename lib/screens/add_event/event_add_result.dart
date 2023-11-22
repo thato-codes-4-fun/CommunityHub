@@ -1,4 +1,5 @@
 import 'package:community_hub/constants/colors.dart';
+import 'package:community_hub/screens/home/home.dart';
 import 'package:community_hub/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,14 @@ class _EventResultScreenState extends State<EventResultScreen> {
               color: greenColor,
             ),
             Flexible(child: Container()),
-            CustomButtom(action: 'Go Back', nav: () {}),
+            CustomButtom(
+                action: 'Go Back',
+                nav: () {
+                  Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen()),
+                      (route) => false);
+                }),
             Flexible(child: Container()),
           ],
         ),
