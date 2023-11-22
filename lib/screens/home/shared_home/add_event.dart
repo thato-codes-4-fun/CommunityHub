@@ -1,3 +1,4 @@
+import 'package:community_hub/screens/add_event/add_event_details.dart';
 import 'package:community_hub/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,12 @@ class _AddEventScreenState extends State<AddEventScreen> {
             ),
           ),
           Flexible(child: Container()),
-          CustomButtom(action: 'Continue', nav: () {}),
+          CustomButtom(
+              action: 'Continue',
+              nav: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const AddEventDetailsScreen()));
+              }),
         ],
       ),
     );
