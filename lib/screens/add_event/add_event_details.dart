@@ -1,4 +1,5 @@
 import 'package:community_hub/constants/colors.dart';
+import 'package:community_hub/screens/add_event/preview_event.dart';
 import 'package:community_hub/widgets/custom_button.dart';
 import 'package:community_hub/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
@@ -87,7 +88,10 @@ class _AddEventDetailsScreenState extends State<AddEventDetailsScreen> {
             ),
             CustomButtom(
               action: 'Preview',
-              nav: () {},
+              nav: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const PreviewEVentCreated()));
+              },
             ),
           ],
         ),
