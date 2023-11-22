@@ -14,61 +14,81 @@ class CommunityHub extends StatefulWidget {
 class _CommunityHubState extends State<CommunityHub> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(25),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const CustomHeader(),
-            const SizedBox(
-              height: 20,
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(25),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const CustomHeader(),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            'Categories',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
             ),
-            const Text(
-              'Categories',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            // padding: EdgeInsets.all(20),
+            width: MediaQuery.of(context).size.width,
+            height: 110,
+            // color: greenColor,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: DummyData().categories.length,
+              itemBuilder: (context, index) => CircularText(
+                title: DummyData().categories[index]['title'],
+                image: DummyData().categories[index]['img'],
               ),
             ),
-            const SizedBox(
-              height: 20,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            'Featured Events',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
             ),
-            SizedBox(
-              // padding: EdgeInsets.all(20),
-              width: MediaQuery.of(context).size.width,
-              height: 110,
-              // color: greenColor,
-              child: ListView.builder(
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: 230,
+            child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: DummyData().categories.length,
-                itemBuilder: (context, index) => CircularText(
-                  title: DummyData().categories[index]['title'],
-                  image: DummyData().categories[index]['img'],
-                ),
-              ),
+                itemCount: DummyData().featureEvents.length,
+                itemBuilder: (context, index) => FeaturedBox(
+                      boxData: DummyData().featureEvents[index],
+                    )),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            'Local Hangouts',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              'Featured Events',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: 230,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: DummyData().featureEvents.length,
-                  itemBuilder: (context, index) => FeaturedBox(
-                        boxData: DummyData().featureEvents[index],
-                      )),
-            ),
-          ],
-        ),
-      );
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: 230,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: DummyData().featureEvents.length,
+                itemBuilder: (context, index) => FeaturedBox(
+                      boxData: DummyData().featureEvents[index],
+                    )),
+          ),
+        ],
+      ),
+    );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:community_hub/constants/colors.dart';
 import 'package:community_hub/home/shared_home/community_hub.dart';
+import 'package:community_hub/home/shared_home/directory.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> screensList = [
     const CommunityHub(),
-    const Text('screen'),
+    const Directories(),
     const Text('screen'),
     const Text('screen'),
     const Text('screen'),
