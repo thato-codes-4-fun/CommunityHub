@@ -1,5 +1,5 @@
 import 'package:community_hub/constants/colors.dart';
-import 'package:community_hub/home/home.dart';
+import 'package:community_hub/screens/home/home.dart';
 import 'package:community_hub/widgets/custom_button.dart';
 import 'package:community_hub/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';

@@ -71,7 +71,7 @@ class _CommunityHubState extends State<CommunityHub> {
             height: 20,
           ),
           const Text(
-            'Local Hangouts',
+            'Local',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w600,
