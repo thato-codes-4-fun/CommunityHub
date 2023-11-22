@@ -32,9 +32,9 @@ class FeaturedBox extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  color: darkColor.withOpacity(0.5),
+                  color: darkColor.withOpacity(0.7),
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.1,
+                  height: MediaQuery.of(context).size.height * 0.125,
                 ),
                 Text(
                   boxData['title'],
@@ -44,7 +44,16 @@ class FeaturedBox extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text(boxData['establishment']),
+                Positioned(
+                  bottom: 10,
+                  child: Text(
+                    boxData['establishment'],
+                    style: const TextStyle(
+                      color: whiteColor,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
               ],
             ),
           ],
