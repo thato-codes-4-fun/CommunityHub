@@ -1,4 +1,5 @@
 import 'package:community_hub/constants/colors.dart';
+import 'package:community_hub/home/home.dart';
 import 'package:community_hub/widgets/custom_button.dart';
 import 'package:community_hub/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +58,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 hidePassword: true,
               ),
               Expanded(child: Container()),
-              CustomButtom(action: 'Login', nav: () {}),
+              CustomButtom(
+                  action: 'Login',
+                  nav: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const HomeScreen()));
+                  }),
               Expanded(child: Container()),
             ],
           ),
